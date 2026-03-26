@@ -16,10 +16,10 @@ export default function Land() {
       <SectionHeading
         eyebrow="Land & property"
         title="A simple inquiry page for lots, acreage, and land-development questions"
-        body="Powell’s public web presence also references land development and property activity. This route gives that business line a clean place to start a conversation without pretending to be a live listing portal."
+        body="This page gives Powell’s land and property activity a clearer place without letting it overshadow excavation, delivered materials, and the main local service funnel."
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <ResponsiveImage imageKey="land-current-1" fallbackLabel="Land and property" className="min-h-[300px]" />
+        <ResponsiveImage imageKey="land-current-1" fallbackLabel="Land and property" className="min-h-[320px]" />
         <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-6 lg:p-8">
           <div className="text-lg font-semibold text-white">{company.landDivisionName}</div>
           <ul className="mt-4 space-y-3 text-sm leading-7 text-stone-300">

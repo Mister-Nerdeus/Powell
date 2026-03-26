@@ -7,7 +7,7 @@ export default function Contact() {
     <PageContainer className="py-14 sm:py-16">
       <Seo
         title="Contact Powell's Excavating & Septic"
-        description="Call or email Powell's Excavating & Septic in Howard City for excavation, septic system work, materials delivery, storage questions, and general business inquiries."
+        description="Call or email Powell's Excavating & Septic in Howard City for excavation, septic system support, materials delivery, storage questions, and general business inquiries."
       />
       <ContactInfoSection />
     </PageContainer>

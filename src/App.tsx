@@ -10,6 +10,7 @@ import Faq from './pages/Faq';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Land from './pages/Land';
+import Gallery from './pages/Gallery';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/materials" element={<Materials />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/storage" element={<Storage />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/land" element={<Land />} />

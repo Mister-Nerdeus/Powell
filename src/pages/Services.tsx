@@ -10,16 +10,16 @@ export default function Services() {
     <PageContainer className="py-14 sm:py-16">
       <Seo
         title="Services | Powell's Excavating & Septic"
-        description="Explore Powell's excavation, septic and drainfield work, driveways, grading, ponds, and property support services in Howard City and surrounding communities."
+        description="Explore Powell's excavation, septic and drainfield support, driveways, grading, ponds, and property-support services in Howard City and surrounding communities."
       />
       <SectionHeading
         eyebrow="Services"
-        title="Excavation and property services grouped by the problems customers are trying to solve"
-        body="Powell’s keeps the services page practical: excavation, septic systems, drainfields, grading, driveways, ponds, and cleanup support all in one place."
+        title="Excavation and property services presented around customer job types instead of internal categories"
+        body="The service page should sound like a confident local contractor: what Powell’s handles, who each category fits best, and what kinds of questions belong in the phone call."
       />
       <div className="mt-10 space-y-6">
-        {serviceGroups.map((group) => (
-          <ServiceGroupSection key={group.title} group={group} />
+        {serviceGroups.map((group, index) => (
+          <ServiceGroupSection key={group.title} group={group} index={index} />
         ))}
       </div>
       <div className="mt-10">

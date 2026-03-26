@@ -1,13 +1,13 @@
 {
-  "name": "powells-website-demo",
+  "name": "powells-website",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "verify": "npm run build && node scripts/check-content.mjs && node scripts/check-assets.mjs"
+    "verify": "npm run build && node scripts/check-content.mjs && node scripts/check-assets.mjs && node scripts/check-image-dimensions.mjs && node scripts/check-metadata.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -8,12 +8,12 @@ export default function Faq() {
     <PageContainer className="py-14 sm:py-16">
       <Seo
         title="FAQ | Powell's Excavating & Septic"
-        description="Read common questions about Powell's services, septic scope, materials delivery, storage, and what to have ready when you call."
+        description="Read common questions about Powell's services, septic scope, delivered materials, storage, and what to have ready when you call."
       />
       <SectionHeading
         eyebrow="FAQ"
         title="Useful answers before you call"
-        body="Use this page to quickly understand the kinds of work Powell’s handles, what to ask about, and how to be ready when you contact the office."
+        body="FAQ should reduce friction: what Powell’s handles, what not to call about, what materials to ask for, and what information helps the office answer faster."
       />
       <div className="mt-10 space-y-4">
         {faqItems.map((item) => (

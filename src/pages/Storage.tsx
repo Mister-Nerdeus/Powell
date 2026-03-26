@@ -15,11 +15,11 @@ export default function Storage() {
       />
       <SectionHeading
         eyebrow="Storage units"
-        title="Simple storage pricing with a direct path to the office"
-        body="Powell’s also offers storage units. This page keeps it simple: clear unit sizes, public monthly pricing, and a direct call path for availability."
+        title="Simple storage pricing with a clearer local call path"
+        body="Storage is a secondary Powell offering. Keep it easy to understand: public monthly pricing, local office contact, and a straightforward call for current availability."
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <ResponsiveImage imageKey="storage-current-1" fallbackLabel="Storage" className="min-h-[300px]" />
+        <ResponsiveImage imageKey="storage-current-1" fallbackLabel="Storage" className="min-h-[320px]" />
         <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-6 lg:p-8">
           <div className="grid gap-3">
             {storageUnits.map((unit) => (

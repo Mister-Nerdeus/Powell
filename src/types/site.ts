@@ -18,12 +18,14 @@ export type ServiceGroup = {
   title: string;
   intro: string;
   bullets: string[];
+  fit: string;
   imageKey?: string;
 };
 
 export type MaterialItem = {
   name: string;
   description: string;
+  fit: string;
   imageKey?: string;
 };
 
@@ -38,7 +40,13 @@ export type FaqItem = {
   answer: string;
 };
 
-export type ImageCategory = 'hero' | 'services' | 'materials' | 'storage' | 'land' | 'fallback' | 'ignore';
+export type GalleryItem = {
+  title: string;
+  caption: string;
+  imageKey?: string;
+};
+
+export type ImageCategory = 'hero' | 'services' | 'materials' | 'storage' | 'land' | 'gallery' | 'fallback' | 'ignore';
 export type ImageStatus = 'ready' | 'placeholder' | 'missing' | 'ignore';
 
 export type ImageManifestItem = {
@@ -47,5 +55,7 @@ export type ImageManifestItem = {
   category: ImageCategory;
   preferredUsage: string;
   alt: string;
+  minWidth: number;
+  minHeight: number;
   status: ImageStatus;
 };
