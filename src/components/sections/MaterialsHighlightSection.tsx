@@ -4,12 +4,12 @@ import { SectionHeading } from '../ui/SectionHeading';
 
 export function MaterialsHighlightSection() {
   return (
-    <section className="border-y border-white/10 bg-stone-900/50 py-14 sm:py-16">
+    <section className="py-14 sm:py-16">
       <PageContainer>
         <SectionHeading
-          eyebrow="Materials delivered"
-          title="Give gravel, topsoil, stone, and other materials a direct path to the phone"
-          body="This section is intentionally simple. It supports fast comprehension and a fast call instead of pretending to be an ecommerce catalog."
+          eyebrow="Delivered materials"
+          title="Road gravel, topsoil, sand, stone, mulch, and other materials with a direct path to the phone"
+          body="The materials section is built to help customers quickly see what Powell’s can supply, then call to talk through quantity, delivery, and fit for the job."
         />
         <div className="mt-8 flex flex-wrap gap-3">
           {materials.map((material) => (

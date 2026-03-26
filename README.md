@@ -1,17 +1,21 @@
-# Powell Website Demo
+# Powell Website
 
-This repository is now structured around a **demo-first marketing website** for Powell's Excavating & Septic.
+This repository contains a static React + TypeScript marketing site for Powell's Excavating & Septic.
 
-The goal is to create a cleaner, more modern web presence focused on:
-- excavation
-- septic and drainfields
-- gravel and material delivery
-- clear contact paths on desktop and mobile
+The site is organized around the public business lines that matter most online:
+- excavation and site work
+- septic system work and drainfields
+- driveways, grading, ponds, and related property services
+- delivered materials
+- storage-unit inquiries
+- contact-first conversion on desktop and mobile
 
 ## Repository map
 
 - `src/` — React + TypeScript site source
-- `public/images/current/` — imported images from the current Powell site
+- `src/data/` — structured business content and route data
+- `public/images/current/` — Powell imagery used across the site
+- `docs/content-sources.md` — internal provenance notes for sourced public claims
 - `docs/assets.md` — asset manifest rules and naming guidance
 - `tools/image-downloader/` — supporting Python utility for collecting current-site images
 
@@ -29,6 +33,17 @@ The goal is to create a cleaner, more modern web presence focused on:
 npm install
 npm run dev
 ```
+
+## Verification
+
+```bash
+npm run verify
+```
+
+This runs:
+- production build
+- customer-facing content scan for banned meta/demo wording
+- asset manifest validation for `ready` image paths
 
 ## Production build
 
@@ -56,16 +71,16 @@ Open:
 http://localhost:8080
 ```
 
-## Current limitation
+## Content and asset updates
 
-The zip used for this update did **not** include the actual `public/images/current` image files. The site is already prepared for them through `src/data/images.ts`, and placeholder panels will automatically be replaced once the real images are dropped into place.
+- Update business facts in `src/data/`
+- Keep image references manifest-driven through `src/data/images.ts`
+- Update contact details, hours, and service language in data files first
 
 ## Supporting tool
 
-The downloader utility from the earlier repo state has been preserved under:
+The downloader utility has been preserved under:
 
 ```text
 tools/image-downloader/
 ```
-
-Use it to help gather public Powell website imagery for the demo.

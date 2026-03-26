@@ -7,9 +7,9 @@ export function WhyChooseSection() {
     <section className="py-14 sm:py-16">
       <PageContainer>
         <SectionHeading
-          eyebrow="Why this structure works"
-          title="A stronger first impression without overbuilding the demo"
-          body="The goal here is not feature complexity. The goal is a cleaner, clearer site that lets customers understand Powell’s core value faster."
+          eyebrow="Why customers use this site"
+          title="Fast answers, clear service paths, and a better first impression"
+          body="The goal is straightforward: make Powell’s easier to understand, easier to trust, and easier to contact from any device."
         />
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {whyChooseItems.map((item) => (

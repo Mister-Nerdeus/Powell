@@ -9,6 +9,11 @@ export type TrustItem = {
   note?: string;
 };
 
+export type ReviewTheme = {
+  title: string;
+  body: string;
+};
+
 export type ServiceGroup = {
   title: string;
   intro: string;
@@ -22,7 +27,18 @@ export type MaterialItem = {
   imageKey?: string;
 };
 
-export type ImageCategory = 'hero' | 'services' | 'materials' | 'fallback' | 'ignore';
+export type StorageUnit = {
+  size: string;
+  monthlyRate: string;
+  note?: string;
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type ImageCategory = 'hero' | 'services' | 'materials' | 'storage' | 'land' | 'fallback' | 'ignore';
 export type ImageStatus = 'ready' | 'placeholder' | 'missing' | 'ignore';
 
 export type ImageManifestItem = {

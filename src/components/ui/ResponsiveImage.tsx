@@ -14,7 +14,7 @@ export function ResponsiveImage({ imageKey, fallbackLabel, className = '' }: Pro
   if (!image || image.status === 'ignore' || failed || image.status === 'missing') {
     return (
       <div
-        className={`flex min-h-[220px] items-center justify-center rounded-3xl border border-dashed border-white/15 bg-stone-900/70 p-6 text-center text-sm leading-6 text-stone-400 ${className}`}
+        className={`flex min-h-[220px] items-center justify-center rounded-3xl border border-white/10 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 p-6 text-center text-sm leading-6 text-stone-300 ${className}`}
       >
         {fallbackLabel}
       </div>

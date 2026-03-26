@@ -6,7 +6,7 @@ export function ContactInfoSection() {
     <section className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
       <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Contact</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">Make the next step obvious and easy to act on</h1>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">Call, email, or stop in with the details of your job or question</h1>
         <div className="mt-6 space-y-4 text-sm text-stone-200">
           <div>
             <div className="text-stone-400">Phone</div>
@@ -26,17 +26,33 @@ export function ContactInfoSection() {
             <div>{company.cityStateZip}</div>
           </div>
         </div>
+        <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5 text-sm leading-7 text-stone-300">
+          <div className="font-semibold text-white">When you call</div>
+          <ul className="mt-3 space-y-2">
+            {company.contactGuidance.map((item) => (
+              <li key={item}>• {item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
       <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Hours & next step</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Hours & inquiry types</p>
         <div className="mt-5 space-y-2 text-sm text-stone-300">
           {company.hours.map((hour) => (
             <div key={hour}>{hour}</div>
           ))}
         </div>
-        <p className="mt-6 text-sm leading-7 text-stone-300">
-          This contact structure is ready for a real form or quote workflow later, but the demo keeps the first path simple: call or email.
-        </p>
+        <div className="mt-6 grid gap-3 text-sm leading-7 text-stone-300">
+          <div className="rounded-2xl border border-white/10 bg-stone-900/70 p-4">
+            <span className="font-semibold text-white">Service quotes:</span> excavation, septic system work, drainfields, driveways, grading, ponds, and site prep.
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-stone-900/70 p-4">
+            <span className="font-semibold text-white">Materials:</span> road gravel, topsoil, sand, stone, mulch, crushed concrete, and millings.
+          </div>
+          <div className="rounded-2xl border border-white/10 bg-stone-900/70 p-4">
+            <span className="font-semibold text-white">Storage:</span> unit sizes and availability questions.
+          </div>
+        </div>
         <div className="mt-6">
           <Button href={company.phoneHref}>Call {company.phoneDisplay}</Button>
         </div>

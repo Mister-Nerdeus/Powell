@@ -9,17 +9,13 @@ export function ServicesOverviewSection() {
       <PageContainer>
         <SectionHeading
           eyebrow="Core services"
-          title="Start with the work customers are most likely searching for first"
-          body="This demo deliberately leads with excavation, septic, drainfields, and delivered materials instead of mixing every secondary business line into the first impression."
+          title="Excavation and property work presented in the order customers usually think about it"
+          body="Lead with the jobs people call about first: excavation, septic systems, drainfields, driveways, grading, ponds, and practical property support."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {serviceGroups.slice(0, 4).map((group) => (
             <div key={group.title} className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70">
-              <ResponsiveImage
-                imageKey={group.imageKey}
-                fallbackLabel={`Add a current Powell image for “${group.title}” to improve this card.`}
-                className="min-h-[220px] rounded-none"
-              />
+              <ResponsiveImage imageKey={group.imageKey} fallbackLabel={group.title} className="min-h-[220px] rounded-none" />
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white">{group.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-stone-300">{group.intro}</p>

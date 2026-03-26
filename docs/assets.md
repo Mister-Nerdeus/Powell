@@ -1,31 +1,29 @@
 # Powell Asset Rules
 
-## Phase-one source of truth
+## Source of truth
 
-Use `public/images/current/` for imported images from the current Powell website.
+Use `public/images/current/` for current Powell imagery.
 
 ## Manifest-first rule
 
 Do not scatter raw image paths across components. Add or update entries in `src/data/images.ts` first, then consume them from components.
 
-## Recommended categories
+## Current usage categories
 
 - `hero`
 - `services`
 - `materials`
+- `storage`
+- `land`
 - `fallback`
 - `ignore`
 
-## Recommended naming
+## Asset goals
 
-- `hero-01.jpg`
-- `service-01.jpg`
-- `service-02.jpg`
-- `materials-01.jpg`
-- `materials-02.jpg`
-- `fallback-sitework.jpg`
-- `fallback-materials.jpg`
+- Use real Powell images where possible
+- Keep alt text descriptive and business-oriented
+- Avoid user-facing placeholder instructions
 
-## Important note
+## Current note
 
-The zip used for this build did not include the actual current-site images, so the manifest entries are ready but marked `missing`. Once you drop the real files into `public/images/current/`, the site can start using them immediately.
+The current repo already contains usable Powell imagery under `public/images/current/published/`, and the image manifest now points to those files for visible site sections.

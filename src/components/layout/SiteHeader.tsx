@@ -17,7 +17,7 @@ export function SiteHeader() {
             <div className="truncate text-xs text-stone-400">Howard City, Michigan</div>
           </Link>
 
-          <nav className="hidden items-center gap-6 md:flex">
+          <nav className="hidden items-center gap-5 md:flex">
             {navItems.map((item) => (
               <NavLink
                 key={item.href}
