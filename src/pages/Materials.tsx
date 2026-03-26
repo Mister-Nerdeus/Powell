@@ -1,19 +1,22 @@
-import { PageContainer } from "../components/layout/PageContainer";
-import { DeliveryCtaSection } from "../components/sections/DeliveryCtaSection";
-import { MaterialsGridSection } from "../components/sections/MaterialsGridSection";
-import { materialsData } from "../data/materials";
+import { PageContainer } from '../components/layout/PageContainer';
+import { SectionHeading } from '../components/ui/SectionHeading';
+import { MaterialsGridSection } from '../components/sections/MaterialsGridSection';
+import { DeliveryCtaSection } from '../components/sections/DeliveryCtaSection';
 
-export function Materials() {
+export default function Materials() {
   return (
-    <>
-      <section className="py-12">
-        <PageContainer>
-          <h1 className="text-3xl font-bold text-slate-900">Materials</h1>
-          <p className="mt-3 max-w-3xl text-slate-700">{materialsData.intro}</p>
-        </PageContainer>
-      </section>
-      <MaterialsGridSection />
-      <DeliveryCtaSection />
-    </>
+    <PageContainer className="py-14 sm:py-16">
+      <SectionHeading
+        eyebrow="Materials"
+        title="Road gravel, topsoil, stone, mulch, and other delivered materials"
+        body="This page is built for quick comprehension and a fast phone call. It is intentionally not a fake ecommerce catalog."
+      />
+      <div className="mt-10">
+        <MaterialsGridSection />
+      </div>
+      <div className="mt-10">
+        <DeliveryCtaSection />
+      </div>
+    </PageContainer>
   );
 }

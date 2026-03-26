@@ -1,9 +1,9 @@
-import type { NavItem } from "../types/site";
+import type { NavItem } from '../types/site';
 
 export const navItems: NavItem[] = [
-  { id: "home", label: "Home" },
-  { id: "services", label: "Services" },
-  { id: "materials", label: "Materials" },
-  { id: "about", label: "About" },
-  { id: "contact", label: "Contact" }
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Materials', href: '/materials' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];

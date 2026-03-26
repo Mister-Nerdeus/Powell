@@ -1,53 +1,46 @@
-import { companyData } from "../../data/company";
-import { PageContainer } from "../layout/PageContainer";
-import { Button } from "../ui/Button";
-import { SectionHeading } from "../ui/SectionHeading";
+import { company } from '../../data/company';
+import { Button } from '../ui/Button';
 
 export function ContactInfoSection() {
   return (
-    <section className="py-12">
-      <PageContainer>
-        <SectionHeading title="Contact Powell's" description="Call or email for excavation, septic, and materials delivery requests." />
-        <div className="grid gap-4 lg:grid-cols-3">
-          <article className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-700">Phone</h3>
-            <a href={companyData.phoneHref} className="mt-2 block text-lg font-bold text-slate-900 hover:text-slate-700">
-              {companyData.phoneDisplay}
+    <section className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
+      <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Contact</p>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">Make the next step obvious and easy to act on</h1>
+        <div className="mt-6 space-y-4 text-sm text-stone-200">
+          <div>
+            <div className="text-stone-400">Phone</div>
+            <a href={company.phoneHref} className="text-lg font-semibold text-white hover:text-amber-300">
+              {company.phoneDisplay}
             </a>
-          </article>
-
-          <article className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-700">Email</h3>
-            <a
-              href={`mailto:${companyData.email}`}
-              className="mt-2 block break-all text-base font-semibold text-slate-900 hover:text-slate-700"
-            >
-              {companyData.email}
+          </div>
+          <div>
+            <div className="text-stone-400">Email</div>
+            <a href={`mailto:${company.email}`} className="text-lg font-semibold text-white hover:text-amber-300">
+              {company.email}
             </a>
-          </article>
-
-          <article className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-700">Address</h3>
-            {companyData.addressLines.map((line) => (
-              <p key={line} className="mt-2 text-sm text-slate-800">
-                {line}
-              </p>
-            ))}
-          </article>
+          </div>
+          <div>
+            <div className="text-stone-400">Address</div>
+            <div className="text-lg font-semibold text-white">{company.addressLine1}</div>
+            <div>{company.cityStateZip}</div>
+          </div>
         </div>
-
-        <article className="mt-4 rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-700">Hours</h3>
-          <ul className="mt-2 space-y-1 text-sm text-slate-800">
-            {companyData.hours.map((hour) => (
-              <li key={hour}>{hour}</li>
-            ))}
-          </ul>
-          <Button href={companyData.phoneHref} className="mt-4">
-            {companyData.primaryCtaLabel}
-          </Button>
-        </article>
-      </PageContainer>
+      </div>
+      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Hours & next step</p>
+        <div className="mt-5 space-y-2 text-sm text-stone-300">
+          {company.hours.map((hour) => (
+            <div key={hour}>{hour}</div>
+          ))}
+        </div>
+        <p className="mt-6 text-sm leading-7 text-stone-300">
+          This contact structure is ready for a real form or quote workflow later, but the demo keeps the first path simple: call or email.
+        </p>
+        <div className="mt-6">
+          <Button href={company.phoneHref}>Call {company.phoneDisplay}</Button>
+        </div>
+      </div>
     </section>
   );
 }

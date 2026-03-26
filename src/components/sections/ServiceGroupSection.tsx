@@ -1,26 +1,25 @@
-import type { ServiceGroup } from "../../types/site";
-import { PageContainer } from "../layout/PageContainer";
+import type { ServiceGroup } from '../../types/site';
+import { ResponsiveImage } from '../ui/ResponsiveImage';
 
-type ServiceGroupSectionProps = {
-  group: ServiceGroup;
-};
-
-export function ServiceGroupSection({ group }: ServiceGroupSectionProps) {
+export function ServiceGroupSection({ group }: { group: ServiceGroup }) {
   return (
-    <section className="py-8">
-      <PageContainer>
-        <article className="rounded-xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-          <h2 className="text-2xl font-bold text-slate-900">{group.title}</h2>
-          <p className="mt-2 text-slate-700">{group.intro}</p>
-          <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+    <section className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70">
+      <div className="grid gap-0 lg:grid-cols-[0.85fr_1.15fr]">
+        <ResponsiveImage
+          imageKey={group.imageKey}
+          fallbackLabel={`Add a stronger Powell image for “${group.title}” to replace this placeholder panel.`}
+          className="min-h-[260px] rounded-none"
+        />
+        <div className="p-6 lg:p-8">
+          <h3 className="text-2xl font-semibold text-white">{group.title}</h3>
+          <p className="mt-3 text-sm leading-7 text-stone-300">{group.intro}</p>
+          <ul className="mt-5 space-y-2 text-sm text-stone-200">
             {group.bullets.map((bullet) => (
-              <li key={bullet} className="rounded-md bg-slate-100 px-3 py-2 text-sm text-slate-800">
-                {bullet}
-              </li>
+              <li key={bullet}>• {bullet}</li>
             ))}
           </ul>
-        </article>
-      </PageContainer>
+        </div>
+      </div>
     </section>
   );
 }

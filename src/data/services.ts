@@ -1,36 +1,28 @@
-import type { ServicesData } from "../types/site";
+import type { ServiceGroup } from '../types/site';
 
-export const servicesData: ServicesData = {
-  heroSummary:
-    "From rough excavation to septic and drainfield installation, Powell's handles the heavy work with clear communication and dependable scheduling.",
-  highlightCategories: ["Excavation", "Septic / Drainfield", "Material Delivery"],
-  groups: [
-    {
-      title: "Site Prep And Excavation",
-      intro: "We prepare residential and light commercial sites for construction, utilities, and access.",
-      bullets: [
-        "Foundation and footing excavation",
-        "Driveway cut-ins and grading",
-        "Land clearing and topsoil stripping"
-      ]
-    },
-    {
-      title: "Septic And Drainfield Work",
-      intro: "Complete septic projects and replacement work with practical, code-aware installation planning.",
-      bullets: [
-        "New septic system installation",
-        "Drainfield replacement and repair",
-        "Septic tank exposure and service access"
-      ]
-    },
-    {
-      title: "Property Drainage Solutions",
-      intro: "Water management work that protects structures and keeps sites usable in wet conditions.",
-      bullets: [
-        "French drains and trenching",
-        "Yard drainage correction",
-        "Culvert and runoff redirection work"
-      ]
-    }
-  ]
-};
+export const serviceGroups: ServiceGroup[] = [
+  {
+    title: 'Excavation & Site Work',
+    intro: 'Core earthmoving and prep work presented first because it is one of the clearest public Powell service lines.',
+    bullets: ['Site prep', 'Basements, crawlspaces, and slabs', 'General excavation', 'Dozer work'],
+    imageKey: 'hero-current-1',
+  },
+  {
+    title: 'Septic & Drainfield',
+    intro: 'Septic systems and drainfields are a core part of the Powell business identity and deserve dedicated emphasis.',
+    bullets: ['Septic system work', 'Drainfield work', 'Water and sewer line repairs', 'Property support for rural service needs'],
+    imageKey: 'service-current-1',
+  },
+  {
+    title: 'Driveways, Grading & Ponds',
+    intro: 'These are practical, high-interest local service categories that help homeowners quickly see where Powell fits.',
+    bullets: ['Driveways and road work', 'Grading', 'Ponds', 'General property improvement'],
+    imageKey: 'service-current-2',
+  },
+  {
+    title: 'Property Cleanup & Support Work',
+    intro: 'Secondary but still relevant services that support the broader excavation and property-improvement story.',
+    bullets: ['Stump removal', 'Tree-related clearing support', 'Material handling', 'Job-site cleanup support'],
+    imageKey: 'fallback-sitework',
+  },
+];

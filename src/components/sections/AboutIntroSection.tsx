@@ -1,19 +1,13 @@
-import { companyData } from "../../data/company";
-import { PageContainer } from "../layout/PageContainer";
-import { SectionHeading } from "../ui/SectionHeading";
+import { company } from '../../data/company';
 
 export function AboutIntroSection() {
   return (
-    <section className="py-12">
-      <PageContainer>
-        <SectionHeading
-          title={`About ${companyData.name}`}
-          description="Powell's supports property owners with practical excavation, septic, and material delivery work across the local region."
-        />
-        <p className="max-w-3xl text-slate-700">
-          We focus on realistic job planning, dependable communication, and clear next steps so your project can keep moving.
-        </p>
-      </PageContainer>
+    <section className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-8">
+      <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">About Powell’s</p>
+      <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">A grounded business story that supports trust without overselling</h1>
+      <p className="mt-4 max-w-3xl text-base leading-8 text-stone-300">
+        {company.intro} This demo packages that story into a cleaner, more modern first impression while keeping the copy conservative and locally credible.
+      </p>
     </section>
   );
 }

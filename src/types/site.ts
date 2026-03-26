@@ -1,37 +1,35 @@
 export type NavItem = {
-  id: "home" | "services" | "materials" | "about" | "contact";
   label: string;
+  href: string;
 };
 
-export type CompanyData = {
-  name: string;
-  phoneDisplay: string;
-  phoneHref: string;
-  email: string;
-  addressLines: string[];
-  hours: string[];
-  primaryCtaLabel: string;
+export type TrustItem = {
+  label: string;
+  value: string;
+  note?: string;
 };
 
 export type ServiceGroup = {
   title: string;
   intro: string;
   bullets: string[];
+  imageKey?: string;
 };
 
-export type ServicesData = {
-  heroSummary: string;
-  highlightCategories: string[];
-  groups: ServiceGroup[];
+export type MaterialItem = {
+  name: string;
+  description: string;
+  imageKey?: string;
 };
 
-export type MaterialsData = {
-  intro: string;
-  items: string[];
-};
+export type ImageCategory = 'hero' | 'services' | 'materials' | 'fallback' | 'ignore';
+export type ImageStatus = 'ready' | 'placeholder' | 'missing' | 'ignore';
 
-export type TrustData = {
-  stats: Array<{ label: string; value: string }>;
-  signals: string[];
-  reviews: Array<{ source: string; quote: string; author: string }>;
+export type ImageManifestItem = {
+  key: string;
+  path: string;
+  category: ImageCategory;
+  preferredUsage: string;
+  alt: string;
+  status: ImageStatus;
 };

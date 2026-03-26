@@ -1,18 +1,35 @@
-import { servicesData } from "../../data/services";
-import { PageContainer } from "../layout/PageContainer";
-import { SectionHeading } from "../ui/SectionHeading";
+import { serviceGroups } from '../../data/services';
+import { PageContainer } from '../layout/PageContainer';
+import { SectionHeading } from '../ui/SectionHeading';
+import { ResponsiveImage } from '../ui/ResponsiveImage';
 
 export function ServicesOverviewSection() {
   return (
-    <section className="py-12">
+    <section className="py-14 sm:py-16">
       <PageContainer>
-        <SectionHeading title="Services At A Glance" description="Fast way to understand what we handle most often." />
-        <div className="grid gap-4 md:grid-cols-3">
-          {servicesData.groups.map((group) => (
-            <article key={group.title} className="rounded-xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-              <h3 className="text-lg font-semibold text-slate-900">{group.title}</h3>
-              <p className="mt-2 text-sm text-slate-700">{group.intro}</p>
-            </article>
+        <SectionHeading
+          eyebrow="Core services"
+          title="Start with the work customers are most likely searching for first"
+          body="This demo deliberately leads with excavation, septic, drainfields, and delivered materials instead of mixing every secondary business line into the first impression."
+        />
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {serviceGroups.slice(0, 4).map((group) => (
+            <div key={group.title} className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70">
+              <ResponsiveImage
+                imageKey={group.imageKey}
+                fallbackLabel={`Add a current Powell image for “${group.title}” to improve this card.`}
+                className="min-h-[220px] rounded-none"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-white">{group.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-stone-300">{group.intro}</p>
+                <ul className="mt-4 space-y-2 text-sm text-stone-200">
+                  {group.bullets.map((bullet) => (
+                    <li key={bullet}>• {bullet}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
         </div>
       </PageContainer>

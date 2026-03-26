@@ -1,58 +1,71 @@
-# Powell Marketing Site Demo
+# Powell Website Demo
 
-Static frontend marketing demo for Powell's Site & Septic.
+This repository is now structured around a **demo-first marketing website** for Powell's Excavating & Septic.
 
-## Project intent
+The goal is to create a cleaner, more modern web presence focused on:
+- excavation
+- septic and drainfields
+- gravel and material delivery
+- clear contact paths on desktop and mobile
 
-This repo is a frontend-only Vite + React + TypeScript + Tailwind demo focused on:
-- Excavation
-- Septic / drainfield
-- Gravel and material delivery
+## Repository map
 
-No backend, API routes, database, auth, CMS, or SSR are included.
+- `src/` — React + TypeScript site source
+- `public/images/current/` — imported images from the current Powell site
+- `docs/assets.md` — asset manifest rules and naming guidance
+- `tools/image-downloader/` — supporting Python utility for collecting current-site images
 
-## Install
+## Tech stack
+
+- Vite
+- React
+- TypeScript
+- Tailwind CSS
+- React Router
+
+## Local development
 
 ```bash
 npm install
-```
-
-## Dev
-
-```bash
 npm run dev
 ```
 
-## Build
+## Production build
 
 ```bash
 npm run build
 ```
 
-## Preview
+## Docker website server
+
+Build image:
 
 ```bash
-npm run preview
+docker build -t powell-site:latest .
 ```
 
-## Deployment notes
+Run container:
 
-Use any static host (Netlify, Vercel static output, GitHub Pages, Cloudflare Pages).
+```bash
+docker run --rm -p 8080:80 powell-site:latest
+```
 
-1. Run `npm run build`
-2. Deploy the generated `dist/` directory
-3. Share the hosted URL
+Open:
 
-No live form submission behavior is implemented.
+```text
+http://localhost:8080
+```
 
-## Media conventions
+## Current limitation
 
-Place images under `public/images`:
-- `public/images/hero/`
-- `public/images/services/`
-- `public/images/materials/`
-- `public/images/current/`
+The zip used for this update did **not** include the actual `public/images/current` image files. The site is already prepared for them through `src/data/images.ts`, and placeholder panels will automatically be replaced once the real images are dropped into place.
 
-Asset replacement rule:
-- Keep stable filenames when swapping demo assets for production assets to avoid changing component imports/paths.
-- Prefer web-friendly dimensions and use responsive rendering (`object-cover`) to avoid distortion.
+## Supporting tool
+
+The downloader utility from the earlier repo state has been preserved under:
+
+```text
+tools/image-downloader/
+```
+
+Use it to help gather public Powell website imagery for the demo.

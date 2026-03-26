@@ -27,3 +27,7 @@ dev.err
 dev.log
 
 .vite/
+
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts

@@ -1,9 +1,33 @@
-import type { ImgHTMLAttributes } from "react";
+import { useMemo, useState } from 'react';
+import { findImageByKey } from '../../data/images';
 
-type ResponsiveImageProps = ImgHTMLAttributes<HTMLImageElement> & {
-  alt: string;
+type Props = {
+  imageKey?: string;
+  fallbackLabel: string;
+  className?: string;
 };
 
-export function ResponsiveImage({ alt, className = "", ...rest }: ResponsiveImageProps) {
-  return <img alt={alt} className={`h-full w-full object-cover ${className}`.trim()} loading="lazy" {...rest} />;
+export function ResponsiveImage({ imageKey, fallbackLabel, className = '' }: Props) {
+  const image = useMemo(() => findImageByKey(imageKey), [imageKey]);
+  const [failed, setFailed] = useState(false);
+
+  if (!image || image.status === 'ignore' || failed || image.status === 'missing') {
+    return (
+      <div
+        className={`flex min-h-[220px] items-center justify-center rounded-3xl border border-dashed border-white/15 bg-stone-900/70 p-6 text-center text-sm leading-6 text-stone-400 ${className}`}
+      >
+        {fallbackLabel}
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={image.path}
+      alt={image.alt}
+      className={`h-full w-full rounded-3xl object-cover ${className}`}
+      loading="lazy"
+      onError={() => setFailed(true)}
+    />
+  );
 }

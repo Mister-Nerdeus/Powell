@@ -1,84 +1,70 @@
-import { useState } from "react";
-import { companyData } from "../../data/company";
-import { navItems } from "../../data/nav";
-import { Button } from "../ui/Button";
-import { PageContainer } from "./PageContainer";
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { navItems } from '../../data/nav';
+import { company } from '../../data/company';
+import { Button } from '../ui/Button';
+import { PageContainer } from './PageContainer';
 
-type SiteHeaderProps = {
-  activePage: string;
-  onNavigate: (id: string) => void;
-};
-
-export function SiteHeader({ activePage, onNavigate }: SiteHeaderProps) {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const onSelect = (id: string) => {
-    onNavigate(id);
-    setMenuOpen(false);
-  };
+export function SiteHeader() {
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-stone-950/90 backdrop-blur">
       <PageContainer>
-        <div className="flex min-h-16 items-center justify-between gap-3 py-2">
-          <button
-            type="button"
-            onClick={() => onSelect("home")}
-            className="text-left text-sm font-bold uppercase tracking-wide text-slate-900"
-          >
-            Powell's Site & Septic
-          </button>
+        <div className="flex min-h-[72px] items-center justify-between gap-4">
+          <Link to="/" className="min-w-0">
+            <div className="truncate text-base font-bold text-white sm:text-lg">{company.name}</div>
+            <div className="truncate text-xs text-stone-400">Howard City, Michigan</div>
+          </Link>
 
-          <button
-            type="button"
-            className="rounded-md border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-900 md:hidden"
-            onClick={() => setMenuOpen((value) => !value)}
-            aria-expanded={menuOpen}
-            aria-controls="primary-navigation"
-          >
-            {menuOpen ? "Close" : "Menu"}
-          </button>
-
-          <nav id="primary-navigation" className="hidden items-center gap-2 md:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-6 md:flex">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => onSelect(item.id)}
-                className={`rounded-md px-3 py-2 text-sm font-medium ${
-                  item.id === activePage ? "bg-slate-900 text-white" : "text-slate-700 hover:bg-slate-100"
-                }`}
+              <NavLink
+                key={item.href}
+                to={item.href}
+                className={({ isActive }) =>
+                  `text-sm font-medium transition ${isActive ? 'text-amber-300' : 'text-stone-300 hover:text-white'}`
+                }
               >
                 {item.label}
-              </button>
+              </NavLink>
             ))}
-            <Button href={companyData.phoneHref} className="ml-2">
-              Call {companyData.phoneDisplay}
+            <Button href={company.phoneHref} className="px-4 py-2">
+              {company.phoneDisplay}
             </Button>
           </nav>
+
+          <button
+            type="button"
+            onClick={() => setOpen((value) => !value)}
+            className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-white md:hidden"
+            aria-expanded={open}
+            aria-label="Toggle navigation"
+          >
+            Menu
+          </button>
         </div>
 
-        {menuOpen ? (
-          <nav className="border-t border-slate-200 py-3 md:hidden" aria-label="Mobile Primary">
-            <ul className="flex flex-col gap-2">
+        {open ? (
+          <div className="border-t border-white/10 py-4 md:hidden">
+            <div className="flex flex-col gap-3">
               {navItems.map((item) => (
-                <li key={item.id}>
-                  <button
-                    type="button"
-                    onClick={() => onSelect(item.id)}
-                    className={`w-full rounded-md px-3 py-3 text-left text-base font-medium ${
-                      item.id === activePage ? "bg-slate-900 text-white" : "bg-slate-100 text-slate-900"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                </li>
+                <NavLink
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `rounded-xl px-3 py-2 text-sm font-medium transition ${
+                      isActive ? 'bg-amber-400/10 text-amber-300' : 'bg-white/5 text-stone-200 hover:bg-white/10'
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
               ))}
-            </ul>
-            <Button href={companyData.phoneHref} className="mt-3 w-full">
-              Call {companyData.phoneDisplay}
-            </Button>
-          </nav>
+              <Button href={company.phoneHref}>{company.phoneDisplay}</Button>
+            </div>
+          </div>
         ) : null}
       </PageContainer>
     </header>

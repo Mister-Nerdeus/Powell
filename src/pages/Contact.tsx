@@ -1,5 +1,10 @@
-import { ContactInfoSection } from "../components/sections/ContactInfoSection";
+import { PageContainer } from '../components/layout/PageContainer';
+import { ContactInfoSection } from '../components/sections/ContactInfoSection';
 
-export function Contact() {
-  return <ContactInfoSection />;
+export default function Contact() {
+  return (
+    <PageContainer className="py-14 sm:py-16">
+      <ContactInfoSection />
+    </PageContainer>
+  );
 }

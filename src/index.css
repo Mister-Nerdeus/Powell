@@ -3,21 +3,31 @@
 @tailwind utilities;
 
 :root {
-  color: #1f2937;
-  background-color: #f8fafc;
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #0c0a09;
+  color: #fafaf9;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #1f2937;
-  background: radial-gradient(circle at top, #e2e8f0 0%, #f8fafc 45%, #ffffff 100%);
-}
-
-* {
-  box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0c0a09;
+  color: #fafaf9;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
 }

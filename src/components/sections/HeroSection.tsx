@@ -1,36 +1,33 @@
-import { companyData } from "../../data/company";
-import { servicesData } from "../../data/services";
-import { Button } from "../ui/Button";
-import { PageContainer } from "../layout/PageContainer";
+import { company } from '../../data/company';
+import { Button } from '../ui/Button';
+import { PageContainer } from '../layout/PageContainer';
+import { ResponsiveImage } from '../ui/ResponsiveImage';
 
 export function HeroSection() {
   return (
-    <section className="py-12 sm:py-16">
+    <section className="border-b border-white/10 bg-gradient-to-br from-stone-950 via-stone-900 to-amber-950/60 py-14 sm:py-18 lg:py-24">
       <PageContainer>
-        <div className="grid gap-8 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200 lg:grid-cols-[1.2fr_1fr] lg:p-10">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-600">Local Site Work Contractor</p>
-            <h1 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
-              Excavation, Septic / Drainfield, And Gravel Delivery Without The Runaround
+            <p className="inline-flex rounded-full border border-amber-400/20 bg-amber-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-amber-200 sm:text-sm">
+              Demo-first Powell site rebuild
+            </p>
+            <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              {company.heroHeadline}
             </h1>
-            <p className="mt-4 text-base text-slate-700">{servicesData.heroSummary}</p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Button href={companyData.phoneHref}>Call {companyData.phoneDisplay}</Button>
-              <Button href={`mailto:${companyData.email}`} variant="secondary">
-                Email For A Quote
+            <p className="mt-5 max-w-2xl text-base leading-8 text-stone-300 sm:text-lg">{company.heroSubheadline}</p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button href={company.phoneHref}>{company.phoneDisplay}</Button>
+              <Button to="/materials" variant="secondary">
+                Explore Materials
               </Button>
             </div>
           </div>
-          <div className="rounded-xl bg-slate-100 p-5">
-            <p className="text-sm font-semibold text-slate-900">Core Work Categories</p>
-            <ul className="mt-3 space-y-2 text-sm text-slate-700">
-              {servicesData.highlightCategories.map((item) => (
-                <li key={item} className="rounded-md bg-white px-3 py-2 ring-1 ring-slate-200">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          <ResponsiveImage
+            imageKey="hero-current-1"
+            fallbackLabel="Drop the strongest Powell current-site hero image into public/images/current/hero-01.jpg to replace this placeholder block."
+            className="min-h-[320px] shadow-soft"
+          />
         </div>
       </PageContainer>
     </section>

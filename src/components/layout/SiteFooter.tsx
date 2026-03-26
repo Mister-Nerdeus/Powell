@@ -1,33 +1,32 @@
-import { companyData } from "../../data/company";
-import { PageContainer } from "./PageContainer";
+import { company } from '../../data/company';
+import { navItems } from '../../data/nav';
+import { PageContainer } from './PageContainer';
+import { Link } from 'react-router-dom';
 
 export function SiteFooter() {
   return (
-    <footer className="mt-16 border-t border-slate-200 bg-slate-900 py-10 text-slate-100">
+    <footer className="border-t border-white/10 bg-stone-950/80 py-12">
       <PageContainer>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide">{companyData.name}</p>
-            <p className="mt-2 text-sm text-slate-300">Excavation, septic / drainfield, and material delivery support.</p>
+            <h2 className="text-xl font-semibold text-white">{company.name}</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-stone-400">{company.intro}</p>
+            <div className="mt-4 space-y-1 text-sm text-stone-300">
+              <div>{company.phoneDisplay}</div>
+              <div>{company.email}</div>
+              <div>{company.addressLine1}</div>
+              <div>{company.cityStateZip}</div>
+            </div>
           </div>
-
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide">Contact</p>
-            <a href={companyData.phoneHref} className="mt-2 block text-sm text-slate-200 hover:text-white">
-              {companyData.phoneDisplay}
-            </a>
-            <a href={`mailto:${companyData.email}`} className="block text-sm text-slate-200 hover:text-white">
-              {companyData.email}
-            </a>
-          </div>
-
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide">Address</p>
-            {companyData.addressLines.map((line) => (
-              <p key={line} className="mt-1 text-sm text-slate-300">
-                {line}
-              </p>
-            ))}
+            <div className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Navigate</div>
+            <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-stone-300">
+              {navItems.map((item) => (
+                <Link key={item.href} to={item.href} className="hover:text-white">
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </PageContainer>

@@ -1,37 +1,32 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, PropsWithChildren } from "react";
+import { Link } from 'react-router-dom';
 
-type ButtonVariant = "primary" | "secondary";
-
-const classesByVariant: Record<ButtonVariant, string> = {
-  primary: "bg-slate-900 text-white hover:bg-slate-700",
-  secondary: "bg-white text-slate-900 ring-1 ring-slate-300 hover:bg-slate-100",
-};
-
-type CommonProps = {
-  variant?: ButtonVariant;
+type Props = {
+  children: React.ReactNode;
+  href?: string;
+  to?: string;
+  variant?: 'primary' | 'secondary';
   className?: string;
 };
 
-type LinkButtonProps = CommonProps & AnchorHTMLAttributes<HTMLAnchorElement> & { href: string };
-type NativeButtonProps = CommonProps & ButtonHTMLAttributes<HTMLButtonElement> & { href?: never };
+const classes = {
+  primary: 'bg-amber-400 text-stone-950 hover:bg-amber-300',
+  secondary: 'border border-white/15 bg-white/5 text-white hover:bg-white/10',
+};
 
-export function Button(props: PropsWithChildren<LinkButtonProps | NativeButtonProps>) {
-  if ("href" in props && props.href) {
-    const { variant = "primary", className = "", children, href, ...rest } = props;
-    const base = `inline-flex min-h-11 items-center justify-center rounded-md px-4 py-2 text-sm font-semibold transition ${classesByVariant[variant]} ${className}`;
+export function Button({ children, href, to, variant = 'primary', className = '' }: Props) {
+  const base = `inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-semibold transition ${classes[variant]} ${className}`;
+
+  if (to) {
     return (
-      <a className={base} href={href} {...rest}>
+      <Link to={to} className={base}>
         {children}
-      </a>
+      </Link>
     );
   }
 
-  const { variant = "primary", className = "", children, ...buttonProps } = props as NativeButtonProps;
-  const base = `inline-flex min-h-11 items-center justify-center rounded-md px-4 py-2 text-sm font-semibold transition ${classesByVariant[variant]} ${className}`;
-
   return (
-    <button className={base} type="button" {...buttonProps}>
+    <a href={href} className={base}>
       {children}
-    </button>
+    </a>
   );
 }
