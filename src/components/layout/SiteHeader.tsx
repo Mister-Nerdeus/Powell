@@ -10,8 +10,26 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-stone-950/90 backdrop-blur">
+      <div className="powell-glass-line bg-stone-950/70">
+        <PageContainer className="hidden py-2 lg:block">
+          <div className="flex items-center justify-between gap-4 text-xs text-stone-400">
+            <div className="flex items-center gap-4">
+              <span className="text-stone-300">Howard City property work • delivered materials • direct office contact</span>
+              <span className="h-3 w-px bg-white/10" />
+              <span>{company.serviceArea}</span>
+            </div>
+            <div className="flex items-center gap-4">
+              {secondaryNavItems.map((item) => (
+                <NavLink key={item.href} to={item.href} className="hover:text-stone-200">
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        </PageContainer>
+      </div>
       <PageContainer>
-        <div className="flex min-h-[76px] items-center justify-between gap-4">
+        <div className="flex min-h-[80px] items-center justify-between gap-4">
           <Link to="/" className="min-w-0">
             <div className="truncate text-base font-bold text-white sm:text-lg">{company.name}</div>
             <div className="truncate text-xs text-stone-400">Howard City, Michigan</div>
@@ -23,19 +41,12 @@ export function SiteHeader() {
                 key={item.href}
                 to={item.href}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition ${isActive ? 'text-amber-300' : 'text-stone-300 hover:text-white'}`
+                  `text-sm font-medium transition ${isActive ? 'text-amber-200' : 'text-stone-300 hover:text-white'}`
                 }
               >
                 {item.label}
               </NavLink>
             ))}
-            <div className="ml-2 hidden items-center gap-3 text-xs text-stone-500 xl:flex">
-              {secondaryNavItems.map((item) => (
-                <NavLink key={item.href} to={item.href} className="hover:text-stone-300">
-                  {item.label}
-                </NavLink>
-              ))}
-            </div>
             <Button href={company.phoneHref} className="px-4 py-2">
               {company.phoneDisplay}
             </Button>
@@ -54,6 +65,7 @@ export function SiteHeader() {
 
         {open ? (
           <div className="border-t border-white/10 py-4 lg:hidden">
+            <div className="mb-3 text-xs text-stone-400">{company.serviceArea}</div>
             <div className="flex flex-col gap-3">
               {[...primaryNavItems, ...secondaryNavItems].map((item) => (
                 <NavLink

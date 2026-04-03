@@ -16,13 +16,13 @@ export const company = {
     'Friday and Saturday: Closed until spring',
     'After-hours drop slot available at the office',
   ],
-  heroHeadline: 'Excavation, driveways, grading, drainfield support, and delivered materials for Howard City property owners.',
+  heroHeadline: 'Howard City excavation, grading, driveway work, drainfield support, and delivered materials from one established local office.',
   heroSubheadline:
-    'Call Powell’s for site prep, driveway and grading help, septic and drainfield support, road gravel, topsoil, stone, storage information, and straightforward local answers.',
+    'Call Powell’s for site prep, road gravel, topsoil, stone, driveway and grading work, septic and drainfield support, storage-unit questions, and straightforward local answers.',
   intro:
     'Powell’s Excavating & Septic is a long-established Howard City business serving property owners with excavation, septic and drainfield work, driveways, grading, ponds, water and sewer line repairs, delivered materials, storage-unit information, and related property support.',
   trustLine:
-    'Long public business history, direct phone contact, and practical property work arranged around the jobs local customers ask about most.',
+    'Long public business history, direct office contact, and practical property work arranged around the jobs local customers ask about most.',
   primaryCta: 'Call Powell’s to talk through your job, your material order, or your storage question.',
   contactGuidance: [
     'For service work, have your address, the kind of job, and a short description ready.',

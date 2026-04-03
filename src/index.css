@@ -7,8 +7,20 @@
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: #0d0b09;
-  color: #f4f1ea;
+  --powell-bg: #0e0d0b;
+  --powell-bg-soft: #16130f;
+  --powell-panel: rgba(28, 24, 20, 0.92);
+  --powell-panel-warm: rgba(47, 38, 30, 0.9);
+  --powell-border: rgba(255, 245, 226, 0.08);
+  --powell-border-warm: rgba(226, 187, 98, 0.2);
+  --powell-text: #f6f1e8;
+  --powell-text-soft: #d8cfbe;
+  --powell-gold: #e7be67;
+  --powell-gold-strong: #f2c44c;
+  --powell-sand: #d8c6a2;
+  --powell-moss: #63715c;
+  background-color: var(--powell-bg);
+  color: var(--powell-text);
 }
 
 html {
@@ -20,10 +32,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background:
-    radial-gradient(circle at top right, rgba(180, 110, 34, 0.14), transparent 28%),
-    radial-gradient(circle at top left, rgba(88, 114, 82, 0.09), transparent 24%),
-    linear-gradient(180deg, #0d0b09 0%, #15110f 36%, #0d0b09 100%);
-  color: #f4f1ea;
+    radial-gradient(circle at top right, rgba(188, 133, 43, 0.14), transparent 24%),
+    radial-gradient(circle at 18% 18%, rgba(105, 126, 95, 0.1), transparent 18%),
+    radial-gradient(circle at bottom left, rgba(111, 77, 42, 0.12), transparent 20%),
+    linear-gradient(180deg, #0e0d0b 0%, #17130f 22%, #11100d 58%, #0e0d0b 100%);
+  color: var(--powell-text);
 }
 
 a {
@@ -41,32 +54,63 @@ a {
 }
 
 .powell-panel {
-  background: linear-gradient(180deg, rgba(35, 28, 24, 0.92) 0%, rgba(25, 21, 18, 0.96) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.26);
+  background: linear-gradient(180deg, rgba(33, 28, 23, 0.96) 0%, rgba(21, 18, 15, 0.98) 100%);
+  border: 1px solid var(--powell-border);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
 }
 
 .powell-panel-warm {
-  background: linear-gradient(180deg, rgba(58, 44, 31, 0.9) 0%, rgba(28, 24, 21, 0.96) 100%);
-  border: 1px solid rgba(233, 190, 104, 0.12);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+  background: linear-gradient(180deg, rgba(63, 50, 37, 0.94) 0%, rgba(30, 24, 20, 0.98) 100%);
+  border: 1px solid var(--powell-border-warm);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
 }
 
-.powell-section-sand {
-  background: linear-gradient(180deg, rgba(29, 24, 21, 0.78) 0%, rgba(40, 32, 27, 0.9) 100%);
+.powell-panel-sand {
+  background: linear-gradient(180deg, rgba(60, 50, 39, 0.5) 0%, rgba(28, 24, 20, 0.82) 100%);
+  border: 1px solid rgba(226, 206, 167, 0.14);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.24);
 }
 
 .powell-section-band {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: linear-gradient(180deg, rgba(28, 23, 20, 0.86) 0%, rgba(17, 14, 12, 0.94) 100%);
+  background:
+    linear-gradient(180deg, rgba(27, 24, 21, 0.92) 0%, rgba(16, 14, 12, 0.96) 100%),
+    radial-gradient(circle at top left, rgba(87, 116, 81, 0.08), transparent 22%);
+}
+
+.powell-section-sand {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(47, 38, 30, 0.78) 0%, rgba(24, 21, 18, 0.9) 100%),
+    radial-gradient(circle at bottom right, rgba(208, 174, 105, 0.08), transparent 28%);
 }
 
 .powell-chip {
   display: inline-flex;
   border-radius: 9999px;
-  border: 1px solid rgba(233, 190, 104, 0.2);
-  background: rgba(232, 177, 76, 0.1);
-  padding: 0.5rem 0.85rem;
-  color: #f4c767;
+  border: 1px solid rgba(231, 190, 103, 0.22);
+  background: rgba(231, 190, 103, 0.1);
+  padding: 0.5rem 0.9rem;
+  color: #f4cb76;
+}
+
+.powell-underline {
+  position: relative;
+}
+
+.powell-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.45rem;
+  width: 5rem;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, rgba(231, 190, 103, 0.95), rgba(231, 190, 103, 0.12));
+}
+
+.powell-glass-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }

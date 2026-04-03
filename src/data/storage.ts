@@ -12,4 +12,5 @@ export const storageNotes = [
   'Public storage page pricing shows a 2026 deal with the first month free on 12 months.',
   'Autopay is available.',
   'Call the office to ask about current availability and move-in timing.',
+  'Storage is a secondary Powell offering, but it is actively promoted and deserves a clean call path.',
 ];

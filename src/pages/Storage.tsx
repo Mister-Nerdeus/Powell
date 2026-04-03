@@ -15,8 +15,8 @@ export default function Storage() {
       />
       <SectionHeading
         eyebrow="Storage units"
-        title="Simple storage pricing with a direct path to the office"
-        body="Powell’s also offers storage units. Keep it straightforward: public monthly pricing, a visible current deal, and a direct call path for availability and move-in timing."
+        title="Straightforward local storage with simple pricing, a visible public deal, and a direct path to the office"
+        body="Powell’s also offers storage units. Present them cleanly: visible monthly pricing, the current public promotion, and a direct call path for availability and move-in timing."
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
         <ResponsiveImage imageKey="storage-current-1" fallbackLabel="Storage" className="min-h-[320px] powell-panel" />

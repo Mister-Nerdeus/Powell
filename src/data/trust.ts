@@ -8,23 +8,23 @@ export const trustItems: TrustItem[] = [
 ];
 
 export const whyChooseItems: string[] = [
-  'Long public business footprint in Howard City with clear contact information and multiple public listings.',
-  'Excavation, septic and drainfield support, materials delivery, storage, and property questions all tied to one local office number.',
-  'A cleaner, easier-to-call site presentation built around the jobs customers usually need solved first.',
+  'One Howard City office anchors excavation, materials, storage, and broader property questions instead of sending customers through multiple businesses.',
+  'Powell’s publicly presents the practical jobs property owners actually call about: driveways, grading, drainfields, site prep, and delivered materials.',
+  'The company already has the public history and familiarity. The website should make that feel immediate and easy to trust.',
 ];
 
 export const reviewThemes: ReviewTheme[] = [
   {
-    title: 'Friendly local service',
-    body: 'Public review summaries consistently point to helpful people, direct answers, and a business that feels known in the area.',
+    title: 'Friendly local help',
+    body: 'Public review summaries repeatedly suggest Powell’s feels approachable, direct, and easier to work with than a faceless lead source.',
   },
   {
-    title: 'Useful material selection',
-    body: 'Public review sources repeatedly mention mulch, gravel, asphalt millings, and other materials as a reason people stop in or call.',
+    title: 'More than one reason to call',
+    body: 'Review and listing signals point to materials, property work, and practical support that go beyond a single narrow service line.',
   },
   {
-    title: 'Established reputation',
-    body: 'The public footprint suggests Powell’s benefits from long-term local familiarity rather than feeling like a lead-generation shell.',
+    title: 'Established in the area',
+    body: 'The public footprint reads like a known local operation with history, a yard, an office, and repeat familiarity in the community.',
   },
 ];
 
