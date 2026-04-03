@@ -10,9 +10,9 @@ export function ServiceGroupSection({ group, index = 0 }: Props) {
   const reverse = index % 2 === 1;
 
   return (
-    <article className={`grid overflow-hidden rounded-[2rem] border border-white/10 ${reverse ? 'bg-gradient-to-br from-stone-900/70 to-amber-950/30 lg:grid-cols-[1.05fr_0.95fr]' : 'bg-stone-900/70 lg:grid-cols-[0.95fr_1.05fr]'}`}>
+    <article className={`overflow-hidden rounded-[2rem] ${reverse ? 'powell-panel-warm' : 'powell-panel'} grid lg:grid-cols-[0.96fr_1.04fr]`}>
       <div className={reverse ? 'order-2 lg:order-1' : ''}>
-        <ResponsiveImage imageKey={group.imageKey} fallbackLabel={group.title} className="min-h-[280px] rounded-none border-none" />
+        <ResponsiveImage imageKey={group.imageKey} fallbackLabel={group.title} className="min-h-[300px] rounded-none border-none" />
       </div>
       <div className={`p-6 lg:p-8 ${reverse ? 'order-1 lg:order-2' : ''}`}>
         <h2 className="text-2xl font-semibold text-white">{group.title}</h2>

@@ -8,12 +8,12 @@ export function WhyChooseSection() {
       <PageContainer>
         <SectionHeading
           eyebrow="Why Powell’s"
-          title="Public business history, direct contact, and clearer local buying paths"
-          body="This section should feel less like website explanation and more like a reason to trust the business enough to call."
+          title="A stronger local presentation built around trust, direct contact, and practical work"
+          body="Powell’s already has the public business history and service breadth. The website should make that easier to feel at a glance, easier to trust, and easier to call."
         />
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {whyChooseItems.map((item) => (
-            <div key={item} className="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm leading-7 text-stone-300">
+            <div key={item} className="powell-panel-warm rounded-3xl p-6 text-sm leading-7 text-stone-200">
               {item}
             </div>
           ))}

@@ -15,12 +15,12 @@ export default function Land() {
       />
       <SectionHeading
         eyebrow="Land & property"
-        title="A simple inquiry page for lots, acreage, and land-development questions"
-        body="This page gives Powell’s land and property activity a clearer place without letting it overshadow excavation, delivered materials, and the main local service funnel."
+        title="A direct inquiry page for lots, acreage, and land-development questions"
+        body="This page gives Powell’s land and property activity a cleaner place on the site without taking attention away from excavation, delivered materials, and the core local service work."
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <ResponsiveImage imageKey="land-current-1" fallbackLabel="Land and property" className="min-h-[320px]" />
-        <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-6 lg:p-8">
+        <ResponsiveImage imageKey="fallback-sitework" fallbackLabel="Land and property" className="min-h-[320px] powell-panel" />
+        <div className="powell-panel rounded-[2rem] p-6 lg:p-8">
           <div className="text-lg font-semibold text-white">{company.landDivisionName}</div>
           <ul className="mt-4 space-y-3 text-sm leading-7 text-stone-300">
             {landHighlights.map((item) => (

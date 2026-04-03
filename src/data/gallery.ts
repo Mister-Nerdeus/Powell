@@ -3,32 +3,32 @@ import type { GalleryItem } from '../types/site';
 export const galleryItems: GalleryItem[] = [
   {
     title: 'Road gravel and aggregate',
-    caption: 'High-resolution material imagery used to support the delivered-materials side of the business.',
+    caption: 'Bulk material visuals give the site a stronger connection to the day-to-day jobs people call Powell’s about.',
     imageKey: 'materials-road-gravel',
   },
   {
-    title: 'Stone material',
-    caption: 'Stone and aggregate visuals help the site show the kinds of bulk material customers can call about.',
+    title: 'Stone and base material',
+    caption: 'Stone imagery helps the materials side of the business feel more substantial and better organized.',
     imageKey: 'materials-stone',
   },
   {
-    title: 'Storage visibility',
-    caption: 'Storage is a secondary Powell offering and should still look like a real local business line.',
+    title: 'Storage offer',
+    caption: 'Storage is a real Powell revenue line and deserves a cleaner, more professional presentation.',
     imageKey: 'storage-current-1',
   },
   {
-    title: 'Property and land support',
-    caption: 'Land and property imagery gives secondary business lines a cleaner place on the site without taking over the main funnel.',
-    imageKey: 'land-current-1',
+    title: 'Property and land visibility',
+    caption: 'Land and property visuals help secondary business lines feel intentional without overtaking excavation and materials.',
+    imageKey: 'fallback-sitework',
   },
   {
-    title: 'Supporting property scene',
-    caption: 'Additional public-facing imagery helps the site feel more grounded and less abstract.',
-    imageKey: 'gallery-property-1',
+    title: 'Landscape and finish work context',
+    caption: 'Supporting imagery helps the site feel less abstract and more rooted in real local property work.',
+    imageKey: 'service-land2',
   },
   {
     title: 'Material close-up',
-    caption: 'Close-up material imagery works well for cards, gallery previews, and supporting proof sections.',
+    caption: 'Texture and aggregate photography work well for supporting proof bands and materials cards.',
     imageKey: 'gallery-property-2',
   },
 ];

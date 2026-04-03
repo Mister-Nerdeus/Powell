@@ -13,8 +13,8 @@ export default function Materials() {
       />
       <SectionHeading
         eyebrow="Materials"
-        title="Road gravel, topsoil, stone, mulch, millings, and other delivered materials shown with stronger visual support"
-        body="This page should feel like a real local materials page: clearer images, stronger use-case language, and a direct path to call with quantity and delivery questions."
+        title="Road gravel, topsoil, stone, mulch, millings, and other delivered materials"
+        body="Use this page to quickly confirm what Powell’s handles, then call with the material, rough quantity, and delivery location so the office can point you in the right direction."
       />
       <div className="mt-10">
         <MaterialsGridSection />

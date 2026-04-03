@@ -9,22 +9,22 @@ export const trustItems: TrustItem[] = [
 
 export const whyChooseItems: string[] = [
   'Long public business footprint in Howard City with clear contact information and multiple public listings.',
-  'Excavation, septic and drainfield support, materials delivery, and storage information arranged around how people actually shop for local help.',
-  'Bigger type, simpler paths, and stronger mobile-first calls to action built around the phone number.',
+  'Excavation, septic and drainfield support, materials delivery, storage, and property questions all tied to one local office number.',
+  'A cleaner, easier-to-call site presentation built around the jobs customers usually need solved first.',
 ];
 
 export const reviewThemes: ReviewTheme[] = [
   {
-    title: 'Quick local contact',
-    body: 'Public review summaries consistently suggest that Powell’s is easy to reach and practical to work with.',
+    title: 'Friendly local service',
+    body: 'Public review summaries consistently point to helpful people, direct answers, and a business that feels known in the area.',
   },
   {
-    title: 'Straight answers',
-    body: 'The public footprint reads as direct and useful, which matters when a customer is trying to move a property job forward.',
+    title: 'Useful material selection',
+    body: 'Public review sources repeatedly mention mulch, gravel, asphalt millings, and other materials as a reason people stop in or call.',
   },
   {
-    title: 'Known in the area',
-    body: 'Howard City area business identity and long public history help the company feel established rather than temporary.',
+    title: 'Established reputation',
+    body: 'The public footprint suggests Powell’s benefits from long-term local familiarity rather than feeling like a lead-generation shell.',
   },
 ];
 

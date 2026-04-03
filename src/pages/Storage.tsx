@@ -15,12 +15,15 @@ export default function Storage() {
       />
       <SectionHeading
         eyebrow="Storage units"
-        title="Simple storage pricing with a clearer local call path"
-        body="Storage is a secondary Powell offering. Keep it easy to understand: public monthly pricing, local office contact, and a straightforward call for current availability."
+        title="Simple storage pricing with a direct path to the office"
+        body="Powell’s also offers storage units. Keep it straightforward: public monthly pricing, a visible current deal, and a direct call path for availability and move-in timing."
       />
       <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <ResponsiveImage imageKey="storage-current-1" fallbackLabel="Storage" className="min-h-[320px]" />
-        <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-6 lg:p-8">
+        <ResponsiveImage imageKey="storage-current-1" fallbackLabel="Storage" className="min-h-[320px] powell-panel" />
+        <div className="powell-panel-warm rounded-[2rem] p-6 lg:p-8">
+          <div className="mb-4 inline-flex rounded-full border border-amber-300/20 bg-amber-300/10 px-4 py-2 text-sm font-semibold text-amber-200">
+            2026 deal shown publicly: 1st month free on 12 months
+          </div>
           <div className="grid gap-3">
             {storageUnits.map((unit) => (
               <div key={unit.size} className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3">

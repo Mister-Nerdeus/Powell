@@ -10,12 +10,12 @@ export function GalleryPreviewSection() {
       <PageContainer>
         <SectionHeading
           eyebrow="Visual proof"
-          title="A stronger proof layer built from the images already available in the repo"
-          body="The current site needs more than metrics. It needs visible support: materials, storage, land-support visuals, and stronger image use across the main pages."
+          title="Materials, storage, land, and property visuals that make the business feel more real"
+          body="Powell’s should show more than numbers. This proof layer gives the site a better visual story around materials, storage, property support, and the broader business footprint."
         />
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {galleryItems.slice(0, 3).map((item) => (
-            <article key={item.title} className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70">
+            <article key={item.title} className="powell-panel overflow-hidden rounded-[2rem]">
               <ResponsiveImage imageKey={item.imageKey} fallbackLabel={item.title} className="min-h-[220px] rounded-none border-none" />
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-white">{item.title}</h3>

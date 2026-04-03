@@ -9,8 +9,8 @@ type Props = {
 };
 
 const classes = {
-  primary: 'bg-amber-400 text-stone-950 hover:bg-amber-300',
-  secondary: 'border border-white/15 bg-white/5 text-white hover:bg-white/10',
+  primary: 'bg-amber-400 text-stone-950 shadow-[0_18px_45px_rgba(0,0,0,0.22)] hover:bg-amber-300',
+  secondary: 'border border-amber-200/15 bg-stone-900/75 text-stone-100 hover:bg-stone-800/85',
 };
 
 export function Button({ children, href, to, variant = 'primary', className = '' }: Props) {

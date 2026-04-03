@@ -9,17 +9,17 @@ export const faqItems: FaqItem[] = [
   {
     question: 'Does Powell’s pump septic tanks?',
     answer:
-      'Powell’s public homepage language says they do not pump tanks. The site should be used to ask about septic system work, drainfields, and related excavation support rather than tank pumping.',
+      'Powell’s public homepage language says they do not pump tanks. Call Powell’s for septic system work, drainfields, and related excavation support rather than tank pumping.',
   },
   {
     question: 'What materials can I ask about for delivery?',
     answer:
-      'Public business listings and site content mention topsoil, sand, stone, mulch, road gravel, crushed concrete, and millings. Call to ask about your job, quantity, and delivery location.',
+      'Public business listings and site content mention topsoil, sand, stone, mulch, road gravel, crushed concrete, and millings. Call with your material, rough quantity, and delivery location.',
   },
   {
     question: 'Does Powell’s have storage units?',
     answer:
-      'Yes. Powell’s public site markets storage units with several size options. Call the office to ask about availability and move-in timing.',
+      'Yes. Powell’s public site markets storage units with several size options. Call the office to ask about availability, move-in timing, and whether the current storage deal still applies.',
   },
   {
     question: 'What should I have ready when I call?',

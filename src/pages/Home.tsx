@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Seo
         title="Powell's Excavating & Septic | Excavation, materials delivery, and direct local contact"
-        description="Powell's Excavating & Septic serves Howard City with excavation, septic and drainfield support, grading, driveways, delivered materials, and a simpler direct-call path."
+        description="Powell's Excavating & Septic serves Howard City with excavation, septic and drainfield support, grading, driveways, delivered materials, storage units, and a stronger direct-call path."
       />
       <HeroSection />
       <TrustStatsSection />

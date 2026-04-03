@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-stone-950/80 py-12">
+    <footer className="border-t border-white/10 bg-stone-950/90 py-12">
       <PageContainer>
         <div className="grid gap-8 md:grid-cols-[1.15fr_0.85fr_0.85fr]">
           <div>
@@ -29,7 +29,7 @@ export function SiteFooter() {
             </div>
           </div>
           <div>
-            <div className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">More Powell’s</div>
+            <div className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Storage, FAQ & land</div>
             <div className="mt-4 grid gap-3 text-sm text-stone-300">
               {secondaryNavItems.map((item) => (
                 <Link key={item.href} to={item.href} className="hover:text-white">

@@ -9,16 +9,16 @@ export default function Gallery() {
     <PageContainer className="py-14 sm:py-16">
       <Seo
         title="Gallery | Powell's Excavating & Septic"
-        description="Browse Powell visual proof assets for materials, storage, property-support imagery, and stronger supporting visuals across the Powell site."
+        description="Browse Powell visual proof assets for materials, storage, land, and supporting property visuals across the Powell site."
       />
       <SectionHeading
         eyebrow="Gallery"
-        title="A stronger visual proof layer for the Powell site"
-        body="The repo did not have enough good, large, relevant images for every major content surface. This gallery gives the site a better proof layer using the strongest assets currently available."
+        title="A better visual proof layer for materials, storage, land, and property support"
+        body="Powell’s public business footprint is broader than one service line. This gallery helps the site show materials, storage, land, and related property visuals in a cleaner, more intentional way."
       />
       <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {galleryItems.map((item) => (
-          <article key={item.title} className="overflow-hidden rounded-[2rem] border border-white/10 bg-stone-900/70">
+          <article key={item.title} className="powell-panel overflow-hidden rounded-[2rem]">
             <ResponsiveImage imageKey={item.imageKey} fallbackLabel={item.title} className="min-h-[240px] rounded-none border-none" />
             <div className="p-6">
               <h2 className="text-xl font-semibold text-white">{item.title}</h2>

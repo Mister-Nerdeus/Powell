@@ -9,7 +9,7 @@ export const storageUnits: StorageUnit[] = [
 ];
 
 export const storageNotes = [
+  'Public storage page pricing shows a 2026 deal with the first month free on 12 months.',
   'Autopay is available.',
   'Call the office to ask about current availability and move-in timing.',
-  'Storage is a secondary Powell offering and does not replace the main service and materials business.',
 ];

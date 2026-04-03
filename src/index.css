@@ -7,8 +7,8 @@
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: #0c0a09;
-  color: #fafaf9;
+  background-color: #0d0b09;
+  color: #f4f1ea;
 }
 
 html {
@@ -19,8 +19,11 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background: #0c0a09;
-  color: #fafaf9;
+  background:
+    radial-gradient(circle at top right, rgba(180, 110, 34, 0.14), transparent 28%),
+    radial-gradient(circle at top left, rgba(88, 114, 82, 0.09), transparent 24%),
+    linear-gradient(180deg, #0d0b09 0%, #15110f 36%, #0d0b09 100%);
+  color: #f4f1ea;
 }
 
 a {
@@ -30,4 +33,40 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(232, 177, 76, 0.3);
+  color: #fff7e8;
+}
+
+.powell-panel {
+  background: linear-gradient(180deg, rgba(35, 28, 24, 0.92) 0%, rgba(25, 21, 18, 0.96) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.26);
+}
+
+.powell-panel-warm {
+  background: linear-gradient(180deg, rgba(58, 44, 31, 0.9) 0%, rgba(28, 24, 21, 0.96) 100%);
+  border: 1px solid rgba(233, 190, 104, 0.12);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+}
+
+.powell-section-sand {
+  background: linear-gradient(180deg, rgba(29, 24, 21, 0.78) 0%, rgba(40, 32, 27, 0.9) 100%);
+}
+
+.powell-section-band {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(28, 23, 20, 0.86) 0%, rgba(17, 14, 12, 0.94) 100%);
+}
+
+.powell-chip {
+  display: inline-flex;
+  border-radius: 9999px;
+  border: 1px solid rgba(233, 190, 104, 0.2);
+  background: rgba(232, 177, 76, 0.1);
+  padding: 0.5rem 0.85rem;
+  color: #f4c767;
 }

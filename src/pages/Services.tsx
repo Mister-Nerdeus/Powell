@@ -14,8 +14,8 @@ export default function Services() {
       />
       <SectionHeading
         eyebrow="Services"
-        title="Excavation and property services presented around customer job types instead of internal categories"
-        body="The service page should sound like a confident local contractor: what Powell’s handles, who each category fits best, and what kinds of questions belong in the phone call."
+        title="Excavation and property services grouped around the problems customers are trying to solve"
+        body="Powell’s serves people who need dirt moved, a driveway improved, a drainfield question answered, or a property project pushed forward with a direct local call."
       />
       <div className="mt-10 space-y-6">
         {serviceGroups.map((group, index) => (

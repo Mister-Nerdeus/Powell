@@ -9,7 +9,7 @@ export default function About() {
     <PageContainer className="py-14 sm:py-16">
       <Seo
         title="About Powell's | Howard City excavation and property support"
-        description="Learn more about Powell's Excavating & Septic, a long-established Howard City business handling excavation, drainfield support, materials delivery, and related property work."
+        description="Learn more about Powell's Excavating & Septic, a long-established Howard City business handling excavation, drainfield support, materials delivery, storage, and related property work."
       />
       <AboutIntroSection />
       <div className="mt-10">

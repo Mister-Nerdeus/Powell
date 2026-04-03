@@ -4,11 +4,11 @@ import { Button } from '../ui/Button';
 export function ContactInfoSection() {
   return (
     <section className="grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-      <div className="rounded-[2rem] border border-white/10 bg-stone-900/70 p-8">
+      <div className="powell-panel-warm rounded-[2rem] p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Contact</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">Call, email, or stop in with the details that will help the office point you in the right direction</h1>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">Call, email, or stop in with the details that help the office answer faster</h1>
         <p className="mt-4 max-w-2xl text-sm leading-7 text-stone-300">
-          The contact page should act like the close of the site: clear contact details, clearer inquiry types, and stronger guidance on what to have ready before you call.
+          Powell’s is easiest to use when the next step is obvious: call with the job, the material, the storage need, or the property question and let the office point you in the right direction.
         </p>
         <div className="mt-6 space-y-4 text-sm text-stone-200">
           <div>
@@ -38,8 +38,8 @@ export function ContactInfoSection() {
           </ul>
         </div>
       </div>
-      <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8">
-        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Hours & inquiry paths</p>
+      <div className="powell-panel rounded-[2rem] p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.24em] text-amber-300">Hours & inquiry types</p>
         <div className="mt-5 space-y-2 text-sm text-stone-300">
           {company.hours.map((hour) => (
             <div key={hour}>{hour}</div>
@@ -53,7 +53,7 @@ export function ContactInfoSection() {
             <span className="font-semibold text-white">Delivered materials:</span> road gravel, topsoil, sand, stone, mulch, crushed concrete, and millings.
           </div>
           <div className="rounded-2xl border border-white/10 bg-stone-900/70 p-4">
-            <span className="font-semibold text-white">Storage:</span> unit sizes, monthly pricing, and current availability questions.
+            <span className="font-semibold text-white">Storage and land:</span> unit sizes, pricing, availability, and general property questions.
           </div>
         </div>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
